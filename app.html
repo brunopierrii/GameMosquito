@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Inicial</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="game.js"></script>
+    </head>
+    <body onresize="ajustaTamanhoJanela()">
+
+        <div class="painel">
+            <div class="vidas">
+                <img id="v1" src="imagens/coracao_cheio.png" alt="coracaoCheio">
+                <img id="v2" src="imagens/coracao_cheio.png" alt="coracaoCheio">
+                <img id="v3" src="imagens/coracao_cheio.png" alt="coracaoCheio">
+            </div>
+            <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+        </div>
+
+
+        <script>
+            document.getElementById('cronometro').innerHTML = tempo
+
+            //cria mosquito, com base na criação do html no script externo
+            var criaMosquito = setInterval(function() {
+                posicaoRandom()
+            }, criaMosquitoTempo)
+        </script>
+    </body>
+</html>
